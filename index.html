@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Mobiel intranet</title>
+
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css">
+	<style>
+		#error{
+			display:none;
+		
+		}
+		
+		
+	</style>
+	</head>
+	<body>	
+	<form id="uploadForm" enctype="multipart/form-data">
+		<button type="button" class="btn btn-default" aria-label="Left Align" id="btn_inline_photo">
+					<span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+				</button>
+		<input type='file' accept='image/*;capture=camera' onchange='openFile(event)' name="imageFile" id="file_photo" style="display:none;"><br>
+		<div id="error" class="alert alert-danger fadeOut" role="alert"></div>
+		<div class="row" id="image_row">
+				
+		</div>	
+	</form>
+	<script src="js/jquery-1.10.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="js/grabfoto.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btn_inline_photo").click(function(){
+				$("#file_photo").click();
+			
+			});
+		
+		});
+	</script>
+	</body>
+</html>
